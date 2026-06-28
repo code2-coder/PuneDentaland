@@ -7,7 +7,9 @@ const outfit = "'Outfit', sans-serif";
 
 export default function TestimonialsSection({ testimonialIdx, setTestimonialIdx }) {
     return (
-        <section id="testimonials" className="py-20 lg:py-28 bg-white">
+        <section id="testimonials" className="py-24 lg:py-32 bg-white relative overflow-hidden">
+            <div className="absolute inset-0 bg-[linear-gradient(to_right,#f0f9ff_1px,transparent_1px),linear-gradient(to_bottom,#f0f9ff_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)] opacity-40"></div>
+
             <div className="max-w-7xl mx-auto px-5 sm:px-8">
                 <motion.div
                     variants={stagger}
@@ -43,13 +45,13 @@ export default function TestimonialsSection({ testimonialIdx, setTestimonialIdx 
                     >
                         {TESTIMONIALS.map((t, i) => (
                             <div key={i} className="min-w-full px-2">
-                                <div
-                                    className="max-w-2xl mx-auto rounded-3xl p-8 lg:p-12 border border-sky-100 text-center"
-                                    style={{
-                                        background:
-                                            "linear-gradient(135deg, #f0f9ff, #ecfeff)",
-                                    }}
+                                <motion.div
+                                    whileHover={{ y: -8, scale: 1.01 }}
+                                    transition={{ type: "spring", stiffness: 300 }}
+                                    className="max-w-2xl mx-auto rounded-[2rem] p-8 lg:p-12 border border-sky-100 text-center relative overflow-hidden group shadow-sm hover:shadow-[0_20px_50px_rgba(2,132,199,0.12)] transition-shadow duration-300 bg-white"
                                 >
+                                    <div className="absolute inset-0 bg-gradient-to-br from-sky-50 to-white opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                                    <div className="relative z-10">
                                     <div className="flex justify-center gap-1 mb-6">
                                         {Array.from({ length: t.rating }).map((_, j) => (
                                             <Star
@@ -70,7 +72,8 @@ export default function TestimonialsSection({ testimonialIdx, setTestimonialIdx 
                                         </p>
                                         <p className="text-sky-600 text-sm mt-1">{t.role}</p>
                                     </div>
-                                </div>
+                                    </div>
+                                </motion.div>
                             </div>
                         ))}
                     </motion.div>

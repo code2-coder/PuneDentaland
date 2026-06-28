@@ -13,3 +13,29 @@ export const stagger = {
         transition: { staggerChildren: 0.1 }
     }
 };
+
+export const floatAnimation = {
+    animate: {
+        y: [0, -15, 0],
+        transition: {
+            duration: 4,
+            repeat: Infinity,
+            ease: "easeInOut"
+        }
+    }
+};
+
+export const glowPulse = {
+    animate: {
+        boxShadow: [
+            "0 0 0px 0px rgba(14, 165, 233, 0)",
+            "0 0 20px 5px rgba(14, 165, 233, 0.15)",
+            "0 0 0px 0px rgba(14, 165, 233, 0)"
+        ],
+        transition: {
+            duration: 3,
+            repeat: Infinity,
+            ease: "easeInOut"
+        }
+    }
+};

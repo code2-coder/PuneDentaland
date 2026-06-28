@@ -1,5 +1,5 @@
 import { motion } from "motion/react";
-import { Phone, MapPin, Smile } from "lucide-react";
+import { Phone, MapPin, Smile, ArrowRight } from "lucide-react";
 import { PHONE_NUMBER, SERVICES } from "@/constants/index.js";
 import { fadeUp, stagger } from "@/utils/animations.js";
 
@@ -7,8 +7,12 @@ const outfit = "'Outfit', sans-serif";
 
 export default function ContactSection({ formData, handleFormChange, handleFormSubmit }) {
     return (
-        <section id="contact" className="py-20 lg:py-28 bg-slate-50 relative overflow-hidden">
-            <div className="absolute top-0 right-0 w-[500px] h-[500px] rounded-full blur-3xl opacity-30 pointer-events-none bg-sky-200" />
+        <section id="contact" className="py-24 lg:py-32 bg-slate-50 relative overflow-hidden">
+            <motion.div 
+                animate={{ scale: [1, 1.1, 1], opacity: [0.3, 0.5, 0.3] }}
+                transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
+                className="absolute top-0 right-0 w-[600px] h-[600px] rounded-full blur-[120px] pointer-events-none bg-sky-200" 
+            />
 
             <div className="max-w-7xl mx-auto px-5 sm:px-8 relative z-10">
                 <motion.div
@@ -191,18 +195,23 @@ export default function ContactSection({ formData, handleFormChange, handleFormS
 
                             <button
                                 type="submit"
-                                className="w-full py-4 rounded-xl text-white font-bold text-lg shadow-lg hover:shadow-xl hover:-translate-y-0.5 transition-all duration-300"
+                                className="w-full py-4 rounded-xl text-white font-bold text-lg shadow-lg hover:shadow-[0_20px_40px_rgba(3,105,161,0.25)] hover:-translate-y-1 transition-all duration-300 relative overflow-hidden group"
                                 style={{
                                     background: "linear-gradient(135deg, #0369a1, #06b6d4)",
-                                    boxShadow: "0 12px 24px rgba(3,105,161,0.2)",
                                 }}
                             >
-                                Confirm Appointment via WhatsApp
+                                <span className="relative z-10 flex items-center justify-center gap-2">Confirm Appointment <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform"/></span>
+                                <div className="absolute inset-0 -translate-x-full group-hover:animate-[shimmer_1.5s_infinite] bg-gradient-to-r from-transparent via-white/30 to-transparent z-0"></div>
                             </button>
                         </form>
                     </motion.div>
                 </motion.div>
             </div>
+            <style>{`
+                @keyframes shimmer {
+                    100% { transform: translateX(100%); }
+                }
+            `}</style>
         </section>
     );
 }

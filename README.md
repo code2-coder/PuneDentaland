@@ -2,13 +2,27 @@
 
 Welcome to the official repository for **Pune Dentaland**, a premium, modern, and highly responsive dental clinic landing page. Designed with a focus on world-class user experience, fast performance, and high-conversion aesthetics.
 
-## 🌟 Features
+## 📸 Showcase & Screenshots
 
-- **Ultra-Premium UI/UX**: Built with custom glassmorphism effects, dynamic shadows, and elegant typography.
-- **Smooth Animations**: Powered by Framer Motion for buttery-smooth scrolling, hover micro-interactions, and section reveals.
-- **Floating Header & WhatsApp Integration**: Features a magnetic scrolling navbar and an instant-connect WhatsApp floating widget.
-- **Fully Responsive**: Flawless experience across desktop, tablet, and mobile devices with custom touch-friendly mobile drawers.
-- **Optimized for Production**: Extremely lightweight build with a minimal footprint, ensuring blazing fast load times.
+> **Note**: Add your actual project screenshots here by replacing the placeholder links.
+
+<div align="center">
+  <img src="https://via.placeholder.com/800x400/0ea5e9/ffffff?text=Hero+Section+Screenshot" alt="Pune Dentaland Hero Section" width="800" style="border-radius: 12px; margin-bottom: 20px; box-shadow: 0 4px 14px rgba(0,0,0,0.1);" />
+  
+  <br/>
+  
+  <img src="https://via.placeholder.com/390x600/0ea5e9/ffffff?text=Mobile+Responsive+View" alt="Mobile View" width="390" style="border-radius: 12px; margin-right: 10px; box-shadow: 0 4px 14px rgba(0,0,0,0.1);" />
+  <img src="https://via.placeholder.com/390x600/0284c7/ffffff?text=Contact+Form" alt="Contact Form View" width="390" style="border-radius: 12px; box-shadow: 0 4px 14px rgba(0,0,0,0.1);" />
+</div>
+
+## 🌟 Core Features & Highlights
+
+- **Ultra-Premium UI/UX**: Built with bespoke glassmorphism effects, dynamic shadows, and elegant typography that rivals top-tier SaaS platforms.
+- **Boutique Floating Header**: A dynamic, scrolling navbar that transforms into a blurred "pill" layout for a highly modern aesthetic.
+- **Magnetic Micro-Interactions**: Powered by Framer Motion for buttery-smooth scrolling, magnetic hover effects on buttons, and beautiful section reveals.
+- **WhatsApp Integration**: Features a persistent, animated WhatsApp floating widget to maximize patient conversions and lead generation.
+- **Fully Responsive Architecture**: Flawless experience across desktop, tablet, and mobile devices with custom touch-friendly mobile drawers and grid systems.
+- **Optimized for Production**: Extremely lightweight build with a minimal footprint, ensuring blazing fast load times and top-tier SEO performance.
 
 ## 🛠️ Tech Stack
 

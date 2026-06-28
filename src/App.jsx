@@ -3,6 +3,7 @@ import Navbar from "@/components/layout/Navbar.jsx";
 import HeroSection from "@/components/sections/HeroSection.jsx";
 import ServicesSection from "@/components/sections/ServicesSection.jsx";
 import AboutSection from "@/components/sections/AboutSection.jsx";
+import GallerySection from "@/components/sections/GallerySection.jsx";
 import TestimonialsSection from "@/components/sections/TestimonialsSection.jsx";
 import CtaSection from "@/components/sections/CtaSection.jsx";
 import ContactSection from "@/components/sections/ContactSection.jsx";
@@ -72,6 +73,7 @@ export default function App() {
             <HeroSection scrollTo={scrollTo} />
             <ServicesSection scrollTo={scrollTo} />
             <AboutSection />
+            <GallerySection />
             <TestimonialsSection
                 testimonialIdx={testimonialIdx}
                 setTestimonialIdx={setTestimonialIdx}
