@@ -1,5 +1,5 @@
 import { motion } from "motion/react";
-import { Phone, MapPin, Smile, ArrowRight } from "lucide-react";
+import { Phone, MapPin, Smile, ArrowRight, Clock } from "lucide-react";
 import { PHONE_NUMBER, SERVICES } from "@/constants/index.js";
 import { fadeUp, stagger } from "@/utils/animations.js";
 
@@ -92,6 +92,32 @@ export default function ContactSection({ formData, handleFormChange, handleFormS
                                         style={{ fontFamily: outfit }}
                                     >
                                         Pune, Maharashtra
+                                    </p>
+                                </div>
+                            </motion.div>
+
+                            <motion.div
+                                variants={fadeUp}
+                                className="flex items-center gap-4 p-4 rounded-2xl bg-white border border-slate-100 shadow-sm hover:shadow-md transition-shadow relative overflow-hidden"
+                            >
+                                <div className="absolute top-0 right-0 px-3 py-1 bg-emerald-100 text-emerald-700 text-xs font-bold rounded-bl-xl z-10 animate-pulse">Open Now</div>
+                                <div
+                                    className="w-12 h-12 rounded-xl flex items-center justify-center flex-shrink-0"
+                                    style={{
+                                        background: "linear-gradient(135deg, #fffbeb, #fef3c7)",
+                                    }}
+                                >
+                                    <Clock className="w-6 h-6 text-amber-500" />
+                                </div>
+                                <div>
+                                    <p className="text-sm text-slate-500 font-medium">
+                                        Opening Hours
+                                    </p>
+                                    <p
+                                        className="font-bold text-slate-900 text-lg"
+                                        style={{ fontFamily: outfit }}
+                                    >
+                                        Mon - Sun: 9am – 9pm
                                     </p>
                                 </div>
                             </motion.div>

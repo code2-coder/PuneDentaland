@@ -9,18 +9,48 @@ const WhatsAppIcon = () => (
 
 export default function FloatingWhatsApp() {
     return (
-        <motion.a
-            href={WHATSAPP_URL}
-            target="_blank"
-            rel="noopener noreferrer"
-            initial={{ scale: 0, opacity: 0 }}
-            animate={{ scale: 1, opacity: 1 }}
-            whileHover={{ scale: 1.1 }}
-            whileTap={{ scale: 0.9 }}
-            className="fixed bottom-6 right-6 z-50 flex items-center justify-center w-14 h-14 rounded-full bg-[#25D366] text-white shadow-lg shadow-[#25D366]/40 hover:bg-[#128C7E] transition-colors"
-            aria-label="Chat on WhatsApp"
-        >
-            <WhatsAppIcon />
-        </motion.a>
+        <div className="fixed bottom-6 right-6 lg:bottom-10 lg:right-10 z-50 flex items-center justify-end">
+            <motion.a
+                href={WHATSAPP_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                initial={{ scale: 0, opacity: 0 }}
+                animate={{ scale: 1, opacity: 1 }}
+                whileHover="hover"
+                whileTap={{ scale: 0.95 }}
+                className="group relative flex items-center bg-gradient-to-br from-[#25D366] to-[#128C7E] text-white p-3.5 sm:p-4 rounded-full shadow-[0_12px_30px_rgba(37,211,102,0.4)] hover:shadow-[0_20px_40px_rgba(37,211,102,0.5)] transition-shadow duration-300 cursor-pointer"
+                aria-label="Chat on WhatsApp"
+            >
+                {/* Outer pulsing rings for attention */}
+                <div className="absolute inset-0 rounded-full border border-[#25D366] animate-[ping_2s_cubic-bezier(0,0,0.2,1)_infinite] opacity-60"></div>
+                <div className="absolute inset-0 rounded-full border-[1.5px] border-[#25D366] animate-[ping_2.5s_cubic-bezier(0,0,0.2,1)_infinite] opacity-30 delay-150"></div>
+
+                {/* Animated Icon */}
+                <div className="relative z-10 flex items-center justify-center drop-shadow-md">
+                    <motion.div
+                        variants={{
+                            hover: { 
+                                rotate: [0, -15, 15, -15, 15, 0], 
+                                transition: { duration: 0.5, ease: "easeInOut" } 
+                            }
+                        }}
+                    >
+                        <WhatsAppIcon />
+                    </motion.div>
+                </div>
+
+                {/* Expanding Text on Hover */}
+                <motion.div
+                    className="overflow-hidden whitespace-nowrap hidden sm:block"
+                    initial={{ width: 0, opacity: 0, marginLeft: 0 }}
+                    variants={{
+                        hover: { width: "auto", opacity: 1, marginLeft: 12 }
+                    }}
+                    transition={{ duration: 0.35, ease: [0.22, 1, 0.36, 1] }}
+                >
+                    <span className="font-extrabold text-[0.95rem] tracking-wide pr-3 drop-shadow-sm">Chat with us</span>
+                </motion.div>
+            </motion.a>
+        </div>
     );
 }

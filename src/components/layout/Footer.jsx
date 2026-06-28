@@ -1,4 +1,4 @@
-import { Smile, Phone, MapPin, Mail, ArrowRight, Facebook, Youtube, Instagram } from "lucide-react";
+import { Smile, Phone, MapPin, Mail, ArrowRight, Facebook, Youtube, Instagram, Clock } from "lucide-react";
 import { PHONE_NUMBER, NAV_LINKS, WHATSAPP_URL } from "@/constants/index.js";
 
 const outfit = "'Outfit', sans-serif";
@@ -76,6 +76,13 @@ export default function Footer({ scrollTo }) {
                             <li className="flex items-center gap-3">
                                 <Mail className="w-5 h-5 text-sky-400 flex-shrink-0" />
                                 <a href="mailto:contact@punedentaland.com" className="text-slate-400 hover:text-white transition-colors text-sm">contact@punedentaland.com</a>
+                            </li>
+                            <li className="flex items-start gap-3 pt-2">
+                                <Clock className="w-5 h-5 text-emerald-400 flex-shrink-0 mt-0.5" />
+                                <div>
+                                    <span className="text-emerald-400 text-xs font-bold uppercase tracking-wider block mb-1">Open Now</span>
+                                    <span className="text-slate-400 text-sm block">Mon - Sun: 9:00 AM – 9:00 PM</span>
+                                </div>
                             </li>
                         </ul>
                     </div>
