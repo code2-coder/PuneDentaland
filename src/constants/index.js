@@ -7,9 +7,8 @@ export const PHONE_NUMBER = "07559356392";
 export const NAV_LINKS = [
     { label: "Home", href: "#home" },
     { label: "Services", href: "#services" },
-    { label: "About Us", href: "#about" },
-    { label: "Patient Feedback", href: "#testimonials" },
-    { label: "Contact", href: "#contact" }
+    { label: "About", href: "#about" },
+    { label: "Patient Feedback", href: "#testimonials" }
 ];
 
 export const SERVICES = [

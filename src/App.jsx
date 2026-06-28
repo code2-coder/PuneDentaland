@@ -6,6 +6,8 @@ import AboutSection from "@/components/sections/AboutSection.jsx";
 import TestimonialsSection from "@/components/sections/TestimonialsSection.jsx";
 import CtaSection from "@/components/sections/CtaSection.jsx";
 import ContactSection from "@/components/sections/ContactSection.jsx";
+import Footer from "@/components/layout/Footer.jsx";
+import FloatingWhatsApp from "@/components/layout/FloatingWhatsApp.jsx";
 import { TESTIMONIALS, WHATSAPP_NUMBER } from "@/constants/index.js";
 
 const dmSans = "'DM Sans', sans-serif";
@@ -80,6 +82,8 @@ export default function App() {
                 handleFormChange={handleFormChange}
                 handleFormSubmit={handleFormSubmit}
             />
+            <Footer scrollTo={scrollTo} />
+            <FloatingWhatsApp />
         </div>
     );
 }
